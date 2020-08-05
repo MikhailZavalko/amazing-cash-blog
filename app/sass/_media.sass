@@ -1,0 +1,868 @@
+@import "vars"
+
+
+/*==========  Desktop First  ==========*/
+
+
+//Extra large: ≥1200px
+@media (max-width: 1284px)
+	.container
+		width: 952px
+
+	.header
+		.main-head
+			grid-template-columns: 150px auto 155px
+		.menu
+			.menu_list
+				.menu_item
+					margin-right: 40px
+					&::after
+						right: -20px
+
+	.top-section
+		h1
+			font-size: 70px
+		p
+			font-size: 20px
+		&.single
+			h1
+				font-size: 42px
+
+	.callback-section
+		&::after
+			display: none
+		h5
+			font-size: 50px
+	
+
+
+
+
+
+
+//Large: ≥992px
+@media (max-width: 992px)
+	.container
+		width: 728px
+
+	.button
+		&.button-header
+			display: none
+
+	.header
+		.main-head
+			grid-template-columns: 150px auto
+		.menu
+			.menu_list
+				justify-content: flex-end
+				.menu_item
+					margin-right: 30px
+					&::after
+						right: -15px
+
+	.top-section
+		h1
+			font-size: 56px
+		&.info
+			padding: 0
+		&.single
+			h1
+				font-size: 32px
+
+	.callback-section
+		.callback-grid
+			grid-template-columns: auto
+		h5
+			font-size: 30px
+			margin: 0 0 20px
+
+
+
+
+
+
+
+
+
+	// h3.type-h
+	// 	font-size: 26px
+
+	// .button
+	// 	font-size: 17px
+	// 	&.button-header
+	// 		font-size: 16px
+
+	// .header
+	// 	.logo
+	// 		img
+	// 			top: -23px
+	// 	.menu
+	// 		.menu_list
+	// 			.menu_item
+	// 				margin-right: 30px
+	// 				a
+	// 					font-size: 14px
+	// 				&::after
+	// 					right: -15px
+
+	// .top-section
+	// 	padding: 36px 0 100px 0
+	// 	h1
+	// 		margin-top: 60px
+	// 		margin-bottom: 40px
+	// 		line-height: 50px
+	// 		font-size: 36px
+
+	// .about-section
+	// 	padding: 50px 0 0 0
+	// 	.name
+	// 		.m-name
+	// 			font-size: 18px
+	// 		.logo
+	// 			display: none
+	// 	&-content
+	// 		margin-bottom: 50px
+	// 		h3
+	// 			font-size: 24px
+	// 		p
+	// 			font-size: 16px
+	// 	&.history
+	// 		background: none
+	// 		img
+	// 			margin: 25px 0
+	
+	// .button-wrapper
+	// 	padding: 0
+
+	// .advantage-item
+	// 	margin-bottom: 37px
+	// 	h4
+	// 		font-size: 16px
+	// 		margin-top: 15px
+	// 	p
+	// 		font-size: 14px
+	// 	a.button
+	// 		font-size: 16px
+	// 		font-weight: 400
+	// 		height: 37px
+	// 	&.wide
+	// 		width: 330px
+
+	// .type-section
+	// 	.type-div
+	// 		font-size: 18px
+
+	// .black-section
+	// 	p
+	// 		margin-top: 30px
+	// 		font-size: 18px
+
+	// section
+	// 	padding: 60px 0
+
+	// .callback-section
+	// 	h5
+	// 		font-size: 46px
+	// 	h6
+	// 		font-size: 32px
+	// 	.callback-form
+	// 		padding-left: 0
+
+	// .form
+	// 	padding: 30px 20px 30px 20px
+	// 	input
+	// 		padding-left: 15px
+	
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+//Medium: ≥768px
+@media (max-width: 768px)
+	.container
+		width: 536px
+
+	h2.type-head
+		font-size: 28px
+
+	.button
+		height: 60px
+		&.button-header
+			margin-left: 0
+			font-size: 14px
+
+	.header
+		.main-head
+			height: 50px
+			grid-template-columns: 150px 35px
+			justify-content: space-between
+		.menu
+			position: fixed
+			opacity: 0
+			visibility: hidden
+			right: -50px
+			top: 50px
+			width: 400px
+			height: 100%
+			background-color: $gray
+			transition: all .15s ease
+			padding-left: 0
+			z-index: 100
+			display: flex
+			flex-direction: column
+			justify-content: center
+			&.active
+				visibility: visible
+				opacity: 1
+				right: 0
+			.menu_list
+				flex-direction: column
+				.menu_item
+					margin-right: 0
+					margin-left: 50px
+					&::after
+						display: none
+					a
+						text-align: left
+						font-size: 18px
+		.hamburger
+			display: inline-block
+			padding: 0
+			height: 24px
+			outline: none
+		.hamburger-inner, .hamburger-inner::after, .hamburger-inner::before
+			background-color: #fff
+			width: 35px
+			height: 3px
+		.hamburger.is-active .hamburger-inner, .hamburger.is-active .hamburger-inner::after, .hamburger.is-active .hamburger-inner::before
+			background-color: #fff
+		.hamburger-box
+			width: 35px
+
+
+
+	.top-section
+		margin-top: 50px
+		h1
+			font-size: 40px
+		&.info
+			h1
+				font-size: 34px
+			.main-names
+				margin: 170px auto 110px auto
+		&.single
+			h1
+				font-size: 34px
+		// h1
+		// 	line-height: 40px
+		// 	font-size: 28px
+		// 	margin-top: 40px
+		// .intro-item
+		// 	padding-left: 0
+		// 	margin-bottom: 30px
+		// 	p
+		// 		font-size: 15px
+	
+	.type-block
+		grid-template-columns: repeat(2, 1fr)
+		grid-row-gap: 48px
+		grid-column-gap: 40px
+
+
+
+
+	.about-section
+		padding: 40px 0 0 0
+		.name
+			.m-name
+				font-size: 16px
+			.logo
+				display: none
+		&-content
+			margin-bottom: 30px
+			h3
+				font-size: 24px
+			p
+				font-size: 15px
+				margin-bottom: 10px
+		&.history
+			background: none
+			h3
+				margin-bottom: 25px
+			img
+				margin-bottom: 25px
+			.about-section-content
+				margin-bottom: 40px
+				text-align: center
+
+	.info-content
+		.map
+			margin: 40px 0 40px 0
+		.info-links-news
+			justify-content: space-between
+			a
+				margin-right: 0
+		h4
+			line-height: 1.2
+
+	.gallery
+		.owl-nav
+			display: none
+		&.desktop-gallery
+			display: none
+		&.mobile-gallery
+			display: block
+	.slide-item
+		.res-imgs
+			grid-template-columns: repeat(1, 1fr)
+
+	.advantage-item
+		margin-bottom: 37px
+		h4
+			font-size: 16px
+			margin-top: 15px
+		p
+			font-size: 14px
+		a.button
+			font-size: 16px
+			font-weight: 400
+			height: 37px
+		&.wide
+			width: 330px
+
+	.features-section
+		padding-bottom: 50px
+		.button
+			margin-top: 10px
+
+	.type-section
+		.type-div
+			padding: 20px 15px
+			font-size: 18px
+		&.why-select-section
+			.button
+				margin-top: 10px
+
+	.features-section
+		padding-bottom: 30px
+
+	.black-section
+		padding: 70px 0
+		p
+			margin-top: 30px
+			font-size: 16px
+
+	.advantage-item
+		img
+			flex-shrink: 0
+		a.button
+			font-size: 13px
+
+	.callback-section
+		padding: 90px 0 112px 0
+		text-align: left
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+//Small: ≥576px
+@media (max-width: 576px)
+	.container
+		width: 100%
+		margin: 0 auto
+		padding: 0 15px
+		box-sizing: border-box
+
+	h2.type-head
+		font-size: 22px
+
+	.top-section
+		h1
+			margin: 90px 0
+		&.info
+			background: url('../img/top-bg-info-sm.jpg') center no-repeat
+			h1
+				br
+					display: block
+			.main-names
+				display: none
+
+	.header
+		.menu
+			width: 100%
+			.menu_list
+				.menu_item
+					margin-left: 25px
+
+	.info-content
+		.info-links
+			grid-template-columns: repeat(1, 150px)
+			justify-content: center
+		.info-links-news
+			flex-direction: column
+			a
+				margin-right: 0
+				margin-bottom: 30px
+
+	.single-content
+		padding: 0
+		blockquote
+			padding: 0 25px
+			p
+				line-height: 1.8
+		img
+			margin: 40px auto
+		h2
+			font-size: 26px
+			margin: 20px 0
+		p
+			line-height: 1.8
+			margin: 20px 0 40px 0
+		.images
+			img
+				margin: 20px auto
+
+	.callback-section
+		.form
+			padding: 15px
+
+	.content-section
+		padding: 40px 0 50px 0
+		&.single
+			padding: 50px 0
+
+	.type-block
+		grid-template-columns: repeat(1, 1fr)
+		&.video-block
+			grid-template-columns: repeat(1, 1fr)
+
+	.form
+		.input
+			margin-bottom: 15px
+		.input, .button
+			height: 50px
+
+	.main-footer
+		.footer-grid
+			.contacts
+				.vk
+					margin-right: 0
+			
+
+
+
+
+
+
+
+	section
+		padding: 40px 0
+
+	.button
+		height: 60px
+		line-height: 1.2
+		padding-left: 10px
+		padding-right: 10px
+		span
+			font-size: 16px
+			&::after
+				display: none
+
+	h3.type-h
+		font-size: 22px
+		margin-bottom: 30px
+		br
+			display: none
+
+	.top-section
+		min-height: auto
+
+	.advantage-item
+		display: inline-block
+		margin-bottom: 35px
+		width: 100%
+		.adv-img
+			height: 95px
+			display: flex
+			align-items: center
+			justify-content: center
+		img
+			flex-shrink: 0
+		h4
+			font-size: 20px
+			font-weight: 900
+			margin-top: 15px
+			text-align: center
+		p
+			font-size: 16px
+			font-weight: 300
+			margin: 0
+			line-height: 1.2
+		a.button
+			font-size: 16px
+			font-weight: 400
+			height: 37px
+		&.wide
+			width: 330px
+
+
+
+	.about-section
+		padding: 40px 0
+
+
+
+	.feature-section
+		padding: 40px 0
+
+
+
+	.info-grid
+		grid-template-columns: auto
+		grid-gap: 30px
+		.item-img
+			height: auto
+
+
+
+	.profit-section
+		padding: 50px 0
+
+
+
+	.advantages-section
+		padding: 50px 0
+		.advantage-table
+			grid-template-columns: repeat(2, 1fr)
+		.table-item
+			font-size: 14px
+			.layer-desc
+				padding: 7px
+				p br
+					display: none
+		.button
+			margin-top: 35px
+
+
+
+
+	.why-open-section
+		padding: 40px 0
+		h3.type-h
+			text-align: center
+		.why-open-text
+			display: grid
+			grid-template-columns: auto
+			margin-bottom: 25px
+		img
+			margin: 0 auto
+		.info-grid
+			grid-template-columns: auto
+			grid-row-gap: 25px
+			margin-bottom: 40px
+		.form-side
+			.form
+				margin-top: 0
+		h5
+			font-size: 18px
+			font-weight: 400
+			margin: 30px 0 0 0
+			line-height: 1.2
+
+
+
+	.slider-section
+		padding: 40px 0 50px 0
+		.slider
+			padding-bottom: 30px
+			.owl-nav>div
+				display: none
+		.slide
+			padding: 0
+		.num-grid
+			grid-template-columns: auto
+			h5
+				grid-column: 1/2
+				margin: 0 0 20px 0
+			.num-item
+				margin-bottom: 0
+		&::after, &::before
+			display: none
+
+
+
+	.education-center-section
+		padding: 50px 0
+		.photo-grid
+			display: grid
+			grid-template-columns: auto
+			grid-gap: 20px
+			.photo-item
+				min-height: 140px
+				height: 250px
+				&:nth-child(1)
+					grid-column: auto
+					grid-row: auto
+					height: 300px
+				&:nth-child(2)
+					grid-column: auto
+					grid-row: auto
+				&:nth-child(3)
+					grid-column: auto
+					grid-row: auto
+				&:nth-child(4)
+					grid-column: auto
+					grid-row: auto
+				&:nth-child(5)
+					grid-row: auto
+				&:nth-child(6)
+					grid-row: auto
+				&:nth-child(7)
+					grid-row: auto
+				&:nth-child(8)
+					grid-column: auto
+					grid-row: auto
+					height: 300px
+
+
+
+	.open-center-section
+		padding: 40px 0 50px 0
+		.info-grid
+			grid-row-gap: 40px
+
+
+	.num-section
+		padding: 40px 0 55px 0
+		// background: url('../img/num.png') left 50px no-repeat
+		.num-grid
+			display: grid
+			grid-template-columns: auto
+			max-width: 945px
+			grid-gap: 10px
+			grid-row-gap: 40px
+			margin: 0 auto 50px auto
+			.num-item
+				margin-bottom: 0
+				&:nth-child(n)
+					grid-column: auto
+		.button
+			max-width: 370px
+
+
+
+	.benefits-section
+		padding: 50px 0
+		background: #ffe700
+
+
+
+	.black-section
+		padding: 80px 0
+		br
+			display: none
+		&.second
+			padding: 80px 0
+		.black-items
+			flex-direction: column
+			justify-content: center
+			margin-top: 35px
+			.black-item
+				margin-bottom: 25px
+
+
+
+	.composition-section
+		padding: 40px 0 50px 0
+		.box-mobile
+			display: block
+			margin-bottom: 25px
+			img
+				margin: 0 auto
+		.composition-grid
+			grid-template-columns: auto
+			grid-gap: 0
+			margin-bottom: 0
+		.compositon-item
+			margin-bottom: 25px
+		.compbox
+			display: none
+		.button
+			max-width: auto
+
+
+
+	.tariffs-section
+		padding: 40px 0
+		.table
+			.top-line
+				font-size: 12px
+				.top-name1
+					padding: 12px 0
+			tbody
+				tr
+					th, td
+						padding: 12px 3px
+						font-size: 14px
+					th
+						width: 100px
+						word-wrap: anywhere
+						padding: 12px 3px
+
+
+
+	.room-section
+		padding: 50px 0
+		.room-grid
+			grid-template-columns: repeat(1, 1fr)
+			grid-row-gap: 50px
+			.item
+				flex-direction: column
+				align-items: center
+				&:nth-child(1)
+					grid-row:  1 / 2
+					padding-top: 0
+					.text-arrow
+						right: 0
+						bottom: 0
+				&:nth-child(2)
+					grid-column: 1 / 2
+					justify-content: center
+					.text-arrow
+						left: 0
+						top: 0
+				&:nth-child(3)
+					grid-column: 1 / 2
+					.text-arrow
+						right: 0
+						top: 0
+				.text-arrow
+					position: relative
+					display: flex
+					img
+						display: none
+					p
+						margin: 15px 0 0 0
+						line-height: 1
+						font-size: 18px
+						text-align: center
+
+
+
+	.check-list-section
+		padding: 40px 0 50px 0
+		.advantage-grid
+			grid-template-columns: auto
+			grid-gap: 30px
+			&::after
+				display: none
+		.advantage-item
+			margin-bottom: 0
+			min-height: auto
+			&:nth-child(6)
+				order: 6
+			&:nth-child(7)
+				order: 7
+			&:nth-child(8)
+				order: 8
+			&:nth-child(9)
+				order: 9
+			&:nth-child(10)
+				order: 10
+
+
+
+	.callback-section
+		padding: 40px 0
+		.callback-grid
+			grid-template-columns: auto
+		h5
+			font-size: 24px
+			margin: 0 0 20px 0
+			span
+				font-size: 34px
+
+
+
+	.main-footer
+		padding: 7px 0
+		.footer-grid
+			display: flex
+			flex-direction: column
+			justify-content: space-between
+			height: auto
+			.footer-logo
+				margin-bottom: 10px
+				img
+					height: 50px
+					margin: 0 auto
+			a
+				margin-bottom: 10px
+				&.politic-button
+					display: flex
+					justify-content: center
+					align-items: center
+			.contacts
+				display: flex
+				flex-direction: column
+				align-items: center
+				.tel-link
+					font-size: 16px
+					font-weight: 700
+				.link
+					font-size: 14px
+
+
+
+
+
+//Extra small: >0
+@media (max-width: 0)
+	//
