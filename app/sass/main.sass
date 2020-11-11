@@ -292,15 +292,25 @@ h2.type-head
 			span
 				margin-top: 25px
 	.info-links-news
-		display: flex
-		justify-content: center
-		align-items: center
+		display: grid
+		grid-template-columns: repeat(3, 1fr)
+		grid-row-gap: 50px
+		grid-column-gap: 40px
 		a
-			margin-right: 120px
+			text-decoration: none
+			display: flex
+			justify-content: center
+			align-items: center
+			span
+				font-weight: 400
+				font-size: 30px
+				color: $fontcolor
+				transition: $time
 			img
 				flex-shrink: 0
-			&:last-child
-				margin-right: 0
+			&:hover
+				span
+					color: $accent
 	.map
 		margin: 125px 0 85px 0
 	h4
